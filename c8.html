@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Currículum Nüesch</title>
+  <link rel="shortcut icon" type="image/png" href="cv-nueesch.png">
+  <style>
+  	body {
+  	  margin-left: 35pt;
+  	  margin-right: 35pt;
+  	  margin-top: 10pt;
+  	  margin-bottom: 20pt;
+      overflow-x: hidden;
+  	}
+
+    img.class3 {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    img.class4 {
+      margin-left: -46pt;
+      margin-bottom: -23pt;
+    }
+
+  	div {
+  	  padding: 1em;
+  	}
+
+  	h1 {
+  	  font-size: 44pt;
+  	  font-family: Segoe UI;
+  	}
+
+  	h3 {
+  	  display: inline;
+  	  margin-left: 0.4em;
+  	  font-family: Segoe UI;
+  	}
+
+  	a.class1 {
+  	  font-size: 24px;
+  	  font-weight: bold;
+  	  color: rgba(0, 0, 0, 0.6);
+  	  text-decoration: none;
+  	  padding: 0.3em 0.5em;
+  	  border-radius: 5px;
+  	  background-color: #f2f8fb;
+  	  transition: background-color 1s linear;
+  	}
+
+  	a.class2 {
+  	  font-size: 13pt;
+  	  font-weight: 600;
+  	  color: rgb(0, 0, 0);
+  	  text-decoration: none;
+  	  padding: 0.2em 0.2em;
+  	  border-radius: 3px;
+  	  background-color: #f2f8fb;
+  	  transition: background-color 1s linear;
+  	}
+
+  	a:hover, input:hover, button:hover,
+  	a:focus, input:focus, button:focus {
+  	  /*background-color: #add8e6;*/
+  	  background-color: #00aae4;
+  	}
+
+  	p {
+  	  font-size: 13pt;
+  	  font-family: Segoe UI;
+  	}
+
+    .node circle {
+      fill: #fff;
+    /*   stroke: steelblue; */
+      stroke-width: 3px;
+    }
+
+    .node text {
+      font: 12px sans-serif;
+    }
+
+    .link {
+      fill: none;
+      stroke: #ccc;
+    /*   stroke-width: 2px; */
+    }
+  </style>
+</head>
+
+
+<body>
+  
+  <img src="borde-sup.png" class="class3">
+
+  <br>
+
+  <h1>Currículum Vitae Nüesch</h1>
+
+  <div>
+    <h3>
+      <a href="https://naitsirh.github.io/c1.html" class="class1">Modelo1</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c2.html" class="class1">Modelo2</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c3.html" class="class1">Modelo3</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c4.html" class="class1">Modelo4</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c5.html" class="class1">Modelo5</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c6.html" class="class1">Modelo6</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c7.html" class="class1">Modelo7</a>
+    </h3>
+    <h3>
+      <a href="#" class="class1">Modelo8</a>
+    </h3>
+  </div>
+
+
+  <p>
+    Este es un modelo de presentación de mis datos personales, de entre varios.
+  </p>
+  <p>
+    Este modelo es igual que el anterior, desplegando los datos a través de un diagrama de<br/>
+    árbol plegable. La diferencia está en que aquí se colorean los nodos según un valor que<br/>
+    tengan asociado de entrada, y los enlaces tienen un grosor definido por su peso.
+  </p>
+  <p>
+    También, si se pulsa sobre un nodo con relleno, este expande o contrae el diagrama.
+  </p>
+  <p>
+  	Los recursos utilizados se pueden encontrar en <a href="https://bl.ocks.org/tejaser/55c43b4a9febca058363a5e58edbce81 " class="class2" target="_blank" rel="noopener noreferrer">este enlace</a>.
+  </p>
+
+  <!-- load the d3.js library -->
+  <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+  <script type="text/javascript" src="d3.v4.min.js"></script>
+
+  <script>
+
+  var treeData = 
+  {
+   "name": "Christian Nüesch",
+   "value": 40,
+   "children": [
+    {
+     "name": "Estudios",
+     "value": 30,
+     "children": [
+      {
+       "name": "Técnico Mecánico Electricista",
+       "value": 20
+      },
+      {
+       "name": "Analista en Finanzas",
+       "value": 20,
+       "children": [
+        {
+         "name": "Estadística",
+         "value": 10
+        },
+        {
+         "name": "Matemática financiera",
+         "value": 10
+        },
+        {
+         "name": "Estados contables",
+         "value": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Habilidades",
+     "value": 30,
+     "children": [
+      {
+       "name": "Python", 
+       "value": 20,
+       "children": [
+        {
+         "name": "3/5",
+         "value": 10
+        },
+        {
+         "name": "Pandas",
+         "value": 10
+        },
+        {
+         "name": "NumPy",
+         "value": 10
+        },
+        {
+         "name": "Matplotlib",
+         "value": 10
+        },
+        {
+         "name": "Certificados varios",
+         "value": 10
+        },
+        {
+         "name": "Bootcamp en progreso",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "Haskell",
+       "value": 20,
+       "children": [
+        {
+         "name": "3/5",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "HTML5",
+       "value": 20,
+       "children": [
+        {
+         "name": "3/5",
+         "value": 10
+        },
+        {
+         "name": "Cert. Google 40hs",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "CSS3",
+       "value": 20,
+       "children": [
+        {
+         "name": "2/5",
+         "value": 10
+        },
+        {
+         "name": "Cert. Google 40hs",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "JavaScript",
+       "value": 20,
+       "children": [
+        {
+         "name": "2/5",
+         "value": 10
+        },
+        {
+         "name": "D3.js",
+         "value": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Idiomas",
+     "value": 30,
+     "children": [
+      {
+       "name": "Español",
+       "value": 20,
+       "children": [
+        {
+         "name": "10/10",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "Portugués",
+       "value": 20,
+       "children": [
+        {
+         "name": "8/10",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "Inglés",
+       "value": 20,
+       "children": [
+        {
+         "name": "5/10",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "Alemán",
+       "value": 20,
+       "children": [
+        {
+         "name": "4/10",
+         "value": 10
+        },
+        {
+         "name": "Certificado B2",
+         "value": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Otras habilidades",
+     "value": 30,
+     "children": [
+      {
+       "name": "Paquete Office",
+       "value": 20,
+       "children": [
+        {
+         "name": "LibreOffice",
+         "value": 10
+        },
+        {
+         "name": "MicrosoftOffice",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "Paquete WordPress",
+       "value": 20,
+       "children": [
+        {
+         "name": "Local",
+         "value": 10
+        },
+        {
+         "name": "Remoto",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "Linux",
+       "value": 20,
+       "children": [
+        {
+         "name": "Ubuntu",
+         "value": 10
+        },
+        {
+         "name": "Lubuntu",
+         "value": 10
+        },
+        {
+         "name": "Debian",
+         "value": 10
+        },
+        {
+         "name": "TAILS",
+         "value": 10
+        }
+       ]
+      },
+      {
+       "name": "Gephi",
+       "value": 20,
+      },
+      {
+       "name": "ArangoDB",
+       "value": 20,
+      }
+     ]
+    },
+    {
+     "name": "Contacto",
+     "value": 30,
+     "children": [
+      {
+       "name": "christiannueesch@protonmail.com",
+       "value": 20,
+      },
+      {
+       "name": "linkedin.com/in/christian-nüesch",
+       "value": 20,
+      },
+      {
+       "name": "github.com/naitsirh",
+       "value": 20,
+      },
+      {
+       "name": "Cba Cap Bo Centro",
+       "value": 20,
+      },
+      {
+       "name": "+549351-------",
+       "value": 20,
+      }
+     ]
+    }
+   ]
+  };
+
+  // Set the dimensions and margins of the diagram
+  var margin = {top: 20, right: 90, bottom: 30, left: 120},
+      width = 990 - margin.left - margin.right,
+      height = 560 - margin.top - margin.bottom;
+
+  var colorScale = d3.scaleLinear()
+      .domain([0, 1])
+      .range(['red', 'green']);
+  var widthScale = d3.scaleLinear()
+      .domain([1,80])
+      .range([1, 10]);
+
+  // append the svg object to the body of the page
+  // appends a 'group' element to 'svg'
+  // moves the 'group' element to the top left margin
+  var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.right + margin.left)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate("
+            + margin.left + "," + margin.top + ")");
+
+  var i = 0,
+      duration = 750,
+      root;
+
+  // declares a tree layout and assigns the size
+  var treemap = d3.tree().size([height, width]);
+
+  // Assigns parent, children, height, depth
+  root = d3.hierarchy(treeData, function(d) { return d.children; });
+  root.x0 = height / 2;
+  root.y0 = 0;
+
+  // Collapse after the second level
+  root.children.forEach(collapse);
+
+  update(root);
+
+  // Collapse the node and all it's children
+  function collapse(d) {
+    if(d.children) {
+      d._children = d.children
+      d._children.forEach(collapse)
+      d.children = null
+    }
+  }
+
+  function update(source) {
+
+    // Assigns the x and y position for the nodes
+    var treeData = treemap(root);
+
+    // Compute the new tree layout.
+    var nodes = treeData.descendants(),
+        links = treeData.descendants().slice(1);
+
+    // Normalize for fixed-depth.
+    nodes.forEach(function(d){ d.y = d.depth * 180});
+
+    // ****************** Nodes section ***************************
+
+    // Update the nodes...
+    var node = svg.selectAll('g.node')
+        .data(nodes, function(d) {return d.id || (d.id = ++i); });
+
+    // Enter any new modes at the parent's previous position.
+    var nodeEnter = node.enter().append('g')
+        .attr('class', 'node')
+        .attr("transform", function(d) {
+          return "translate(" + source.y0 + "," + source.x0 + ")";
+      })
+      .on('click', click);
+
+    // Add Circle for the nodes
+    nodeEnter.append('circle')
+        .attr('class', 'node')
+        .attr('r', 1e-6)
+        .style("fill", function(d) {
+            return d._children ? "lightsteelblue" : "#fff";
+        })
+        .style("stroke", function(d){return colorScale(d.data.value/12)});
+
+    // Add labels for the nodes
+    nodeEnter.append('text')
+        .attr("dy", ".35em")
+        .attr("x", function(d) {
+            return d.children || d._children ? -13 : 13;
+        })
+        .attr("text-anchor", function(d) {
+            return d.children || d._children ? "end" : "start";
+        })
+        .text(function(d) { return d.data.name; });
+
+    // UPDATE
+    var nodeUpdate = nodeEnter.merge(node);
+
+    // Transition to the proper position for the node
+    nodeUpdate.transition()
+      .duration(duration)
+      .attr("transform", function(d) { 
+          return "translate(" + d.y + "," + d.x + ")";
+       });
+
+    // Update the node attributes and style
+    nodeUpdate.select('circle.node')
+      .attr('r', 10)
+      .style("fill", function(d) {
+          return d._children ? "lightsteelblue" : "#fff";
+      })
+      .attr('cursor', 'pointer');
+
+
+    // Remove any exiting nodes
+    var nodeExit = node.exit().transition()
+        .duration(duration)
+        .attr("transform", function(d) {
+            return "translate(" + source.y + "," + source.x + ")";
+        })
+        .remove();
+
+    // On exit reduce the node circles size to 0
+    nodeExit.select('circle')
+      .attr('r', 1e-6);
+
+    // On exit reduce the opacity of text labels
+    nodeExit.select('text')
+      .style('fill-opacity', 1e-6);
+
+    // ****************** links section ***************************
+
+    // Update the links...
+    var link = svg.selectAll('path.link')
+        .data(links, function(d) { return d.id; })
+        .style('stroke-width', function(d){
+          return widthScale(d.data.value)
+        });
+
+    // Enter any new links at the parent's previous position.
+    var linkEnter = link.enter().insert('path', "g")
+        .attr("class", "link")
+        .attr('d', function(d){
+          var o = {x: source.x0, y: source.y0}
+          return diagonal(o, o)
+        })
+        .style('stroke-width', function(d){
+          return widthScale(d.data.value)
+        });
+
+    // UPDATE
+    var linkUpdate = linkEnter.merge(link);
+
+    // Transition back to the parent element position
+    linkUpdate.transition()
+        .duration(duration)
+        .attr('d', function(d){ return diagonal(d, d.parent) });
+
+    // Remove any exiting links
+    var linkExit = link.exit().transition()
+        .duration(duration)
+        .attr('d', function(d) {
+          var o = {x: source.x, y: source.y}
+          return diagonal(o, o)
+        })
+        .style('stroke-width', function(d){
+          return widthScale(d.data.value)
+        })
+        .remove();
+
+    // Store the old positions for transition.
+    nodes.forEach(function(d){
+      d.x0 = d.x;
+      d.y0 = d.y;
+    });
+
+    // Creates a curved (diagonal) path from parent to the child nodes
+    function diagonal(s, d) {
+
+      path = `M ${s.y} ${s.x}
+              C ${(s.y + d.y) / 2} ${s.x},
+                ${(s.y + d.y) / 2} ${d.x},
+                ${d.y} ${d.x}`
+
+      return path
+    }
+
+    // Toggle children on click.
+    function click(d) {
+      if (d.children) {
+          d._children = d.children;
+          d.children = null;
+        } else {
+          d.children = d._children;
+          d._children = null;
+        }
+      update(d);
+    }
+  }
+
+  </script>
+
+
+  <br>
+  <br>
+  <br>
+
+  <img src="borde-inf.png" class="class4">
+
+
+</body>
+
+</html>
