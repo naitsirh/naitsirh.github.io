@@ -1,2 +1,0 @@
-# naitsirh.github.io
-Presentación
