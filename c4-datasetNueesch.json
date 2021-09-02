@@ -1,0 +1,136 @@
+{
+ "name": "Christian Nüesch", "group": 1,
+ "children": [
+  {
+   "name": "Estudios", "group": 2,
+   "children": [
+    {"name": "Técnico Mecánico Electricista", "group": 3},
+    {
+     "name": "Analista en Finanzas", "group": 3,
+     "children": [
+      {"name": "Estadística", "group": 4},
+      {"name": "Matemática financiera", "group": 4},
+      {"name": "Estados contables", "group": 4}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Habilidades", "group": 2,
+   "children": [
+    {
+     "name": "Python", "group": 3,
+     "children": [
+      {"name": "3/5", "group": 4},
+      {"name": "Pandas", "group": 4},
+      {"name": "NumPy", "group": 4},
+      {"name": "Matplotlib", "group": 4},
+      {"name": "Certificados varios", "group": 4},
+      {"name": "Bootcamp en progreso", "group": 4}
+     ]
+    },
+    {
+     "name": "Haskell", "group": 3,
+     "children": [
+      {"name": "3/5", "group": 4}
+     ]
+    },
+    {
+     "name": "HTML5", "group": 3,
+     "children": [
+      {"name": "3/5", "group": 4},
+      {"name": "Cert. Google 40hs", "group": 4}
+     ]
+    },
+    {
+     "name": "CSS3", "group": 3,
+     "children": [
+      {"name": "2/5", "group": 4},
+      {"name": "Cert. Google 40hs", "group": 4}
+     ]
+    },
+    {
+     "name": "JavaScript", "group": 3,
+     "children": [
+      {"name": "2/5", "group": 4},
+      {"name": "D3.js", "group": 4}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Idiomas", "group": 2,
+   "children": [
+    {
+     "name": "Español", "group": 3,
+     "children": [
+      {"name": "10/10", "group": 4}
+     ]
+    },
+    {
+     "name": "Portugués", "group": 3,
+     "children": [
+      {"name": "8/10", "group": 4}
+     ]
+    },
+    {
+     "name": "Inglés", "group": 3,
+     "children": [
+      {"name": "5/10", "group": 4}
+     ]
+    },
+    {
+     "name": "Alemán", "group": 3,
+     "children": [
+      {"name": "4/10", "group": 4},
+      {"name": "Certificado B2", "group": 4}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Otras habilidades", "group": 2,
+   "children": [
+    {
+     "name": "Paquete Office", "group": 3,
+     "children": [
+      {"name": "LibreOffice", "group": 4},
+      {"name": "MicrosoftOffice", "group": 4}
+     ]
+    },
+    {
+     "name": "Paquete WordPress", "group": 3,
+     "children": [
+      {"name": "Local", "group": 4},
+      {"name": "Remoto", "group": 4}
+     ]
+    },
+    {
+     "name": "Linux", "group": 3,
+     "children": [
+      {"name": "Ubuntu", "group": 4},
+      {"name": "Lubuntu", "group": 4},
+      {"name": "Debian", "group": 4},
+      {"name": "TAILS", "group": 4}
+     ]
+    },
+    {
+     "name": "Gephi", "group": 3
+    },
+    {
+     "name": "ArangoDB", "group": 3
+    }
+   ]
+  },
+  {
+   "name": "Contacto", "group": 2,
+   "children": [
+    {"name": "christiannueesch@protonmail.com", "group": 3},
+    {"name": "linkedin.com/in/christian-nüesch", "group": 3},
+    {"name": "github.com/naitsirh", "group": 3},
+    {"name": "Cba Cap Bo Centro", "group": 3},
+    {"name": "+549351-------", "group": 3}
+   ]
+  }
+ ]
+}
