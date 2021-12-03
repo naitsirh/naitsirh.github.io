@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Currículum Nüesch</title>
+  <link rel="shortcut icon" type="image/png" href="cv-nueesch.png">
+  <style>
+  	body {
+  	  margin-left: 35pt;
+  	  margin-right: 35pt;
+  	  margin-top: 10pt;
+  	  margin-bottom: 20pt;
+      overflow-x: hidden;
+  	}
+
+    img.class3 {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    img.class4 {
+      margin-left: -46pt;
+      margin-bottom: -23pt;
+    }
+
+  	div {
+  	  padding: 1em;
+  	}
+
+  	h1 {
+  	  font-size: 44pt;
+  	  font-family: Segoe UI;
+  	}
+
+  	h3 {
+  	  display: inline;
+  	  margin-left: 0.4em;
+  	  font-family: Segoe UI;
+  	}
+
+  	a.class1 {
+  	  font-size: 24px;
+  	  font-weight: bold;
+  	  color: rgba(0, 0, 0, 0.6);
+  	  text-decoration: none;
+  	  padding: 0.3em 0.5em;
+  	  border-radius: 5px;
+  	  background-color: #f2f8fb;
+  	  transition: background-color 1s linear;
+  	}
+
+  	a.class2 {
+  	  font-size: 13pt;
+  	  font-weight: 600;
+  	  color: rgb(0, 0, 0);
+  	  text-decoration: none;
+  	  padding: 0.2em 0.2em;
+  	  border-radius: 3px;
+  	  background-color: #f2f8fb;
+  	  transition: background-color 1s linear;
+  	}
+
+    a.class5 {
+      font-size: 24px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+      padding: 0.3em 0.5em;
+      border-radius: 5px;
+      background-color: #f2f8fb;
+      transition: background-color 1s linear;
+    }
+
+  	a:hover, input:hover, button:hover,
+  	a:focus, input:focus, button:focus {
+  	  /*background-color: #add8e6;*/
+  	  background-color: #00aae4;
+  	}
+
+    a.class5:hover, input:hover, button:hover,
+    a.class5:focus, input:focus, button:focus {
+      /*background-color: #add8e6;*/
+      /*background-color: #00aae4;*/
+      background-color: #f40f02;
+    }
+
+  	p {
+  	  font-size: 13pt;
+  	  font-family: Segoe UI;
+  	}
+
+    .links line {
+      stroke: #999;
+      stroke-opacity: 0.6;
+    }
+
+    .nodes rect {
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+
+    text {
+      font-family: sans-serif;
+      font-size: 10px;
+    }
+
+  </style>
+</head>
+
+
+<body>
+  
+  <img src="borde-sup.png" class="class3">
+
+  <br>
+
+  <h1>Currículum Vitae Nüesch</h1>
+
+  <div>
+    <h3>
+      <a href="https://naitsirh.github.io/c1.html" class="class1">Modelo1</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c2.html" class="class1">Modelo2</a>
+    </h3>
+    <h3>
+      <a href="#" class="class1">Modelo3</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c4.html" class="class1">Modelo4</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c5.html" class="class1">Modelo5</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c6.html" class="class1">Modelo6</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c7.html" class="class1">Modelo7</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c8.html" class="class1">Modelo8</a>
+    </h3>
+    <h3>
+      <a href="curriculum_nueesch.html" class="class5" target="_blank" rel="noopener noreferrer">PDF</a>
+    </h3>
+  </div>
+
+
+  <p>
+    Este es un modelo de presentación de mis datos personales, de entre varios.
+  </p>
+  <p>
+    En este caso muestro los datos de mi currículum a través de un grafo de fuerzas<br/>
+    no dirigido, con etiquetas (labels) en cada nodo. Aquí los nodos están representados<br/>
+    por rectángulos de colores, los cuales están asociados por grupos.<br/>
+    No pude solucionar un conflicto de la librería D3.js para que me devuelva el "Bouding<br/>
+    Box" del texto de cada nodo.
+  </p>
+  <p>
+    Cada nodo se puede arrastrar y soltar, ya que es desplegado en pantalla de forma dinámica.
+  </p>
+  <p>
+    Los recursos utilizados se pueden encontrar en <a href="https://bl.ocks.org/heybignick/3faf257bbbbc7743bb72310d03b86ee8" class="class2" target="blank" rel="noopener noreferrer">este enlace</a>.
+  </p>
+
+
+  <svg width="960" height="600"></svg>
+  <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+  <script type="text/javascript" src="d3.v4.min.js"></script>
+  <script>
+
+  var svg = d3.select("svg"),
+      width = +svg.attr("width"),
+      height = +svg.attr("height");
+
+  var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+  var simulation = d3.forceSimulation()
+      .force("link", d3.forceLink().id(function(d) { return d.id; })
+        .strength(0.3))
+      .force("charge", d3.forceManyBody()
+        .strength(-50))
+      .force("center", d3.forceCenter(width / 2, height / 2));
+
+  d3.json("c3-2-datasetNueesch.json", function(error, graph) {
+    if (error) throw error;
+
+    var link = svg.append("g")
+        .attr("class", "links")
+      .selectAll("line")
+      .data(graph.links)
+      .enter().append("line")
+        .attr("stroke-width", function(d) { return d.value; });
+
+    var node = svg.append("g")
+        .attr("class", "nodes")
+      .selectAll("g")
+      .data(graph.nodes)
+      .enter().append("g")
+
+    var rects = node.append("rect")
+      .attr("width", function(d) { return d.title.length * 5.6; })
+      //.attr('width', function(d) { return d.title.getComputedTextLength() })
+      //.attr('width', bbox.width)
+      .attr("height", 16)
+      .attr('rx', 3)
+      .attr("fill", function(d) { return color(d.group); })
+      .style('fill-opacity', 0.5);
+
+    var lables = node.append("text")
+        .text(function(d) {
+          return d.title;
+        })
+        .attr('x', 4)
+        .attr('y', 11);
+
+    var ttls = node.append("title")
+        .text(function(d) { return d.title; });
+
+
+    // Create a drag handler and append it to the node object instead
+    var drag_handler = d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+
+    drag_handler(node);
+    
+    simulation
+        .nodes(graph.nodes)
+        .on("tick", ticked);
+
+    simulation.force("link")
+        .links(graph.links);
+
+    function ticked() {
+      link
+          .attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+
+      node
+          .attr("transform", function(d) {
+            return "translate(" + d.x + "," + d.y + ")";
+          })
+    }
+  });
+
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  </script>
+
+
+  <br>
+  <br>
+
+  <img src="borde-inf.png" class="class4">
+
+
+</body>
+
+</html>
