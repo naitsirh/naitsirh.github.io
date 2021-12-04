@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Currículum Nüesch</title>
+  <link rel="shortcut icon" type="image/png" href="cv-nueesch.png">
+  <style>
+  	body {
+  	  margin-left: 35pt;
+  	  margin-right: 35pt;
+  	  margin-top: 10pt;
+  	  margin-bottom: 20pt;
+      overflow-x: hidden;
+  	}
+
+    img.class3 {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    img.class4 {
+      margin-left: -46pt;
+      margin-bottom: -23pt;
+    }
+
+  	div {
+  	  padding: 1em;
+  	}
+
+  	h1 {
+  	  font-size: 44pt;
+  	  font-family: Segoe UI;
+  	}
+
+  	h3 {
+  	  display: inline;
+  	  margin-left: 0.4em;
+  	  font-family: Segoe UI;
+  	}
+
+  	a.class1 {
+  	  font-size: 24px;
+  	  font-weight: bold;
+  	  color: rgba(0, 0, 0, 0.6);
+  	  text-decoration: none;
+  	  padding: 0.3em 0.5em;
+  	  border-radius: 5px;
+  	  background-color: #f2f8fb;
+  	  transition: background-color 1s linear;
+  	}
+
+  	a.class2 {
+  	  font-size: 13pt;
+  	  font-weight: 600;
+  	  color: rgb(0, 0, 0);
+  	  text-decoration: none;
+  	  padding: 0.2em 0.2em;
+  	  border-radius: 3px;
+  	  background-color: #f2f8fb;
+  	  transition: background-color 1s linear;
+  	}
+
+    a.class5 {
+      font-size: 24px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+      padding: 0.3em 0.5em;
+      border-radius: 5px;
+      background-color: #f2f8fb;
+      transition: background-color 1s linear;
+    }
+
+    a:hover, input:hover, button:hover,
+    a:focus, input:focus, button:focus {
+      /*background-color: #add8e6;*/
+      background-color: #00aae4;
+    }
+
+    a.class5:hover, input:hover, button:hover,
+    a.class5:focus, input:focus, button:focus {
+      /*background-color: #add8e6;*/
+      /*background-color: #00aae4;*/
+      background-color: #f40f02;
+    }
+
+  	a:hover, input:hover, button:hover,
+  	a:focus, input:focus, button:focus {
+  	  /*background-color: #add8e6;*/
+  	  background-color: #00aae4;
+  	}
+
+  	p {
+  	  font-size: 13pt;
+  	  font-family: Segoe UI;
+  	}
+
+    .node circle {
+      cursor: pointer;
+      stroke: #3182bd;
+      stroke-width: 1.5px;
+      stroke-opacity: 0.4;
+    }
+
+    .node text {
+      font: 12px sans-serif;
+      pointer-events: none;
+      text-anchor: middle;
+    }
+
+    line.link {
+      fill: none;
+      stroke: #9ecae1;
+      stroke-width: 2.5px;
+      stroke-opacity: 0.4;
+    }
+  </style>
+</head>
+
+
+<body>
+  
+  <img src="borde-sup.png" class="class3">
+
+  <br>
+
+  <h1>Currículum Vitae Nüesch</h1>
+
+  <div>
+    <h3>
+      <a href="https://naitsirh.github.io/c1.html" class="class1">Modelo1</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c2.html" class="class1">Modelo2</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c3.html" class="class1">Modelo3</a>
+    </h3>
+    <h3>
+      <a href="#" class="class1">Modelo4</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c5.html" class="class1">Modelo5</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c6.html" class="class1">Modelo6</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c7.html" class="class1">Modelo7</a>
+    </h3>
+    <h3>
+      <a href="https://naitsirh.github.io/c8.html" class="class1">Modelo8</a>
+    </h3>
+    <h3>
+      <a href="curriculum_nueesch.html" class="class5" target="_blank" rel="noopener noreferrer">PDF</a>
+    </h3>
+  </div>
+
+
+  <p>
+    Este es un modelo de presentación de mis datos personales, de entre varios.
+  </p>
+  <p>
+    En este caso muestro los datos de mi currículum a través de un grafo de fuerzas no dirigido,<br/>
+    con etiquetas (labels) en cada nodo.<br/>
+  </p>
+  <p>
+    Cada nodo se puede arrastrar y soltar, ya que es desplegado en pantalla de forma dinámica.<br/>
+    A su vez, si se pulsa sobre los nodos de tonalidad celeste, el grafo se contrae (pliega)<br/>
+    hasta ese nodo.
+  </p>
+  <p>
+  	Los recursos utilizados se pueden encontrar en <a href="https://bl.ocks.org/mbostock/1093130" class="class2" target="_blank" rel="noopener noreferrer">este enlace</a>.
+  </p>
+
+
+  <!--<script src="//d3js.org/d3.v3.min.js"></script>-->
+  <script type="text/javascript" src="d3.v3.min.js"></script>
+  <script>
+
+  var width = 960,
+      height = 690,
+      root;
+
+  var force = d3.layout.force()
+      .linkDistance(60)
+      .charge(-120)
+      .gravity(.05)
+      .size([width, height])
+      .on("tick", tick);
+
+  var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+  var link = svg.selectAll(".link"),
+      node = svg.selectAll(".node");
+
+  d3.json("c4-datasetNueesch.json", function(error, json) {
+    if (error) throw error;
+
+    root = json;
+    update();
+  });
+
+  function update() {
+    var nodes = flatten(root),
+        links = d3.layout.tree().links(nodes);
+
+    // Restart the force layout.
+    force
+        .nodes(nodes)
+        .links(links)
+        .start();
+
+    // Update links.
+    link = link.data(links, function(d) { return d.target.id; });
+
+    link.exit().remove();
+
+    link.enter().insert("line", ".node")
+        .attr("class", "link");
+
+    // Update nodes.
+    node = node.data(nodes, function(d) { return d.id; });
+
+    node.exit().remove();
+
+    var nodeEnter = node.enter().append("g")
+        .attr("class", "node")
+        .on("click", click)
+        .call(force.drag);
+
+    nodeEnter.append("circle")
+        //.attr("r", function(d) { return Math.sqrt(d.size) / 10 || 4.5; });
+        .attr("r", function(d) { return 10 - d.group});
+
+    nodeEnter.append("text")
+        .attr("dy", ".35em")
+        .text(function(d) { return d.name; });
+
+    node.select("circle")
+        .style("fill", color);
+  }
+
+  function tick() {
+    link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  }
+
+  function color(d) {
+    return d._children ? "#3182bd" // collapsed package
+        : d.children ? "#c6dbef" // expanded package
+        : "#7fff00"; // "#fd8d3c" leaf node
+  }
+
+  // Toggle children on click.
+  function click(d) {
+    if (d3.event.defaultPrevented) return; // ignore drag
+    if (d.children) {
+      d._children = d.children;
+      d.children = null;
+    } else {
+      d.children = d._children;
+      d._children = null;
+    }
+    update();
+  }
+
+  // Returns a list of all nodes under the root.
+  function flatten(root) {
+    var nodes = [], i = 0;
+
+    function recurse(node) {
+      if (node.children) node.children.forEach(recurse);
+      if (!node.id) node.id = ++i;
+      nodes.push(node);
+    }
+
+    recurse(root);
+    return nodes;
+  }
+
+  </script>
+
+
+  <img src="borde-inf.png" class="class4">
+
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+{
+  "nodes": [
+	{"id": 1, "title": "Christian Nüesch", "group": 1},
+
+	{"id": 11, "title": "Estudios", "group": 2},
+	{"id": 12, "title": "Habilidades", "group": 3},
+	{"id": 13, "title": "Idiomas", "group": 4},
+	{"id": 14, "title": "Otras habilidades", "group": 5},
+	{"id": 15, "title": "Contacto", "group": 6},
+
+
+	{"id": 111, "title": "Técnico Mecánico Electricista", "group": 2},
+	{"id": 112, "title": "Analista en Finanzas", "group": 2},
+	{"id": 1121, "title": "Estadística", "group": 11},
+	{"id": 1122, "title": "Matemática financiera", "group": 11},
+	{"id": 1123, "title": "Estados contables", "group": 11},
+
+
+	{"id": 121, "title": "Python", "group": 3},
+	{"id": 122, "title": "Haskell", "group": 3},
+	{"id": 123, "title": "HTML5", "group": 3},
+	{"id": 124, "title": "CSS3", "group": 3},
+	{"id": 125, "title": "JavaScript", "group": 3},
+
+	{"id": 1211, "title": "3/5", "group": 11},
+	{"id": 1212, "title": "Pandas", "group": 11},
+	{"id": 1213, "title": "NumPy", "group": 11},
+	{"id": 1214, "title": "Matplotlib", "group": 11},
+	{"id": 1215, "title": "Certificados varios", "group": 11},
+	{"id": 1216, "title": "Bootcamp en progreso", "group": 11},
+	{"id": 1221, "title": "3/5", "group": 11},
+	{"id": 1231, "title": "3/5", "group": 11},
+	{"id": 1232, "title": "Cert. Google 40hs", "group": 11},
+	{"id": 1241, "title": "2/5", "group": 11},
+	{"id": 1242, "title": "Cert. Google 40hs", "group": 11},
+	{"id": 1251, "title": "2/5", "group": 11},
+	{"id": 1252, "title": "D3.js", "group": 11},
+
+
+	{"id": 131, "title": "Español", "group": 4},
+	{"id": 132, "title": "Portugués", "group": 4},
+	{"id": 133, "title": "Inglés", "group": 4},
+	{"id": 134, "title": "Alemán", "group": 4},
+	{"id": 1311, "title": "10/10", "group": 11},
+	{"id": 1321, "title": "8/10", "group": 11},
+	{"id": 1331, "title": "5/10", "group": 11},
+	{"id": 1341, "title": "4/10", "group": 11},
+	{"id": 1342, "title": "Certificado B2", "group": 11},
+
+
+	{"id": 141, "title": "Paquete Office", "group": 5},
+	{"id": 142, "title": "Paquete WordPress", "group": 5},
+	{"id": 143, "title": "Linux", "group": 5},
+	{"id": 144, "title": "Gephi", "group": 5},
+	{"id": 145, "title": "ArangoDB", "group": 5},
+
+	{"id": 1411, "title": "LibreOffice", "group": 11},
+	{"id": 1412, "title": "MicrosoftOffice", "group": 11},
+	{"id": 1421, "title": "Local", "group": 11},
+	{"id": 1422, "title": "Remoto", "group": 11},
+	{"id": 1431, "title": "Ubuntu", "group": 11},
+	{"id": 1432, "title": "Lubuntu", "group": 11},
+	{"id": 1433, "title": "Debian", "group": 11},
+	{"id": 1434, "title": "TAILS", "group": 11},
+
+
+	{"id": 151, "title": "christiannueesch@protonmail.com", "group": 6},
+	{"id": 152, "title": "linkedin.com/in/christian-nüesch", "group": 6},
+	{"id": 153, "title": "github.com/naitsirh", "group": 6},
+	{"id": 154, "title": "Cba Cap Bo Centro", "group": 6},
+	{"id": 155, "title": "+549351-------", "group": 6}
+  ],
+  "links": [
+	{"source": 1, "target": 11, "value": 6},
+	{"source": 1, "target": 12, "value": 6},
+	{"source": 1, "target": 13, "value": 6},
+	{"source": 1, "target": 14, "value": 6},
+	{"source": 1, "target": 15, "value": 6},
+
+
+	{"source": 11, "target": 111, "value": 3},
+	{"source": 11, "target": 112, "value": 3},
+	{"source": 112, "target": 1121, "value": 1},
+	{"source": 112, "target": 1122, "value": 1},
+	{"source": 112, "target": 1123, "value": 1},
+
+
+	{"source": 12, "target": 121, "value": 3},
+	{"source": 12, "target": 122, "value": 3},
+	{"source": 12, "target": 123, "value": 3},
+	{"source": 12, "target": 124, "value": 3},
+	{"source": 12, "target": 125, "value": 3},
+
+	{"source": 121, "target": 1211, "value": 1},
+	{"source": 121, "target": 1212, "value": 1},
+	{"source": 121, "target": 1213, "value": 1},
+	{"source": 121, "target": 1214, "value": 1},
+	{"source": 121, "target": 1215, "value": 1},
+	{"source": 121, "target": 1216, "value": 1},
+	{"source": 122, "target": 1221, "value": 1},
+	{"source": 123, "target": 1231, "value": 1},
+	{"source": 123, "target": 1232, "value": 1},
+	{"source": 124, "target": 1241, "value": 1},
+	{"source": 124, "target": 1242, "value": 1},
+	{"source": 125, "target": 1251, "value": 1},
+	{"source": 125, "target": 1252, "value": 1},
+
+
+	{"source": 13, "target": 131, "value": 3},
+	{"source": 13, "target": 132, "value": 3},
+	{"source": 13, "target": 133, "value": 3},
+	{"source": 13, "target": 134, "value": 3},
+	{"source": 131, "target": 1311, "value": 1},
+	{"source": 132, "target": 1321, "value": 1},
+	{"source": 133, "target": 1331, "value": 1},
+	{"source": 134, "target": 1341, "value": 1},
+	{"source": 134, "target": 1342, "value": 1},
+
+
+	{"source": 14, "target": 141, "value": 3},
+	{"source": 14, "target": 142, "value": 3},
+	{"source": 14, "target": 143, "value": 3},
+	{"source": 14, "target": 144, "value": 3},
+	{"source": 14, "target": 145, "value": 3},
+
+	{"source": 141, "target": 1411, "value": 1},
+	{"source": 141, "target": 1412, "value": 1},
+	{"source": 142, "target": 1421, "value": 1},
+	{"source": 142, "target": 1422, "value": 1},
+	{"source": 143, "target": 1431, "value": 1},
+	{"source": 143, "target": 1432, "value": 1},
+	{"source": 143, "target": 1433, "value": 1},
+	{"source": 143, "target": 1434, "value": 1},
+
+
+	{"source": 15, "target": 151, "value": 3},
+	{"source": 15, "target": 152, "value": 3},
+	{"source": 15, "target": 153, "value": 3},
+	{"source": 15, "target": 154, "value": 3},
+	{"source": 15, "target": 155, "value": 3}
+  ]
+}
