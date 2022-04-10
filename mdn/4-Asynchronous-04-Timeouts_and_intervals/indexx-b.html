@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>My test page</title>
+  <style type="text/css">
+    html {
+      background-color: white;
+      height: 100%;
+    }
+
+    body {
+      height: inherit;
+      background-color: red;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      display: inline-block;
+      font-size: 10rem;
+    }
+  </style>
+</head>
+
+<body>
+  <p>This is my page</p>
+
+  <div> ↻ </div>
+
+  <script type="text/javascript">
+    // Almacenamos la referencia al elemento div, creamos un contador de rotación y un tiempo de inicio nulo, y creamos una variable no inicializada para almacenar la llamada requestAnimationFrame()
+    const spinner = document.querySelector('div');
+    let rotateCount = 0;
+    let startTime = null;
+    let rAF;
+
+    // Variable bolenana para almacentar el estado del spinner — true está girando y false no está girando
+    let spinnig = false;
+
+    // Creamos la función draw()
+    function draw(timestamp) {
+      if (!startTime) {
+        startTime = timestamp;
+      }
+
+      rotateCount = (timestamp - startTime) * 2;
+
+      // Si rotateCount supera 359, lo configuramos a el 'resto de dividir por 360'
+      if (rotateCount > 359) {
+        rotateCount %= 360;
+      }
+
+      // Configuramos la rotación del div para que sea igual a los grados de rotateCount
+      //spinner.style.transform = `rotate($(rotateCount)deg)`;
+      spinner.style.transform = 'rotate(' + rotateCount + 'deg';
+
+      // Llamamos al siguiente fotograma de la animación
+      rAF = requestAnimationFrame(draw);
+    }
+
+    // Agregamos un detector de eventos para iniciar y detener el spinner cuando se hace clic en la página
+    document.body.addEventListener('click', () => {
+      if (spinnig) {
+        cancelAnimationFrame(rAF);
+        spinnig = false;
+      } else {
+        draw();
+        spinnig = true;
+      }
+    });
+  </script>
+</body>
+</html>

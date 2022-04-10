@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Person greeter app</title>
+  <style type="text/css">
+    form {
+      width: 300px;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 120px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>¡Dale un saludo a alguien!</h1>
+
+  <form>
+    <div>
+      <label for="name">Ingresa nombre:</label>
+      <input type="name" id="name" required>
+    </div>
+
+    <div>
+      <button>¡Saluda!</button>
+    </div>
+  </form>
+
+  <p><button class="cancel">Ya no saludar</button></p>
+
+  <script type="text/javascript">
+    // Almacenamos las referencias a nuestro formulario, elemento de entrada y botones
+    const form = document.querySelector('form');
+    const nameInput = document.getElementById('name');
+    const cancelBtn = document.querySelector('.cancel');
+
+    // Desactivamos el botón cancelar por ahora para que no pueda hacer nada si un saludo aún no está en curso
+    cancelBtn.disabled = true;
+
+    // Definimos nuestra función saludo
+    function sayHi(who) {
+      alert('¡Hola ' + who + '!');
+      // Desactivamos el botón cancelar, se ha mostrado un saludo
+      cancelBtn.disabled = true;
+    }
+
+    // Creamos una variable global que va a actuar como nuestra referencia de setTimeout
+    let myGreeting;
+
+    // Agregamos un detector de eventos a nuestro formulario para iniciar el saludo
+    form.addEventListener('submit', (e) => {
+      // Impedimos el envío del formularios; no queremos esto
+      e.preventDefault();
+      // Habilitamos el botón cancelar
+      cancelBtn.disabled = false;
+      // Establecemos el tiempo de espera para saludar al nombre ingresado en la entrada
+      myGreeting = setTimeout(sayHi, 5000, nameInput.value);
+    });
+
+    // Agregamos un detector de eventos al botón cancelar para cancelar el saludo
+    cancelBtn.addEventListener('click', () => {
+      clearTimeout(myGreeting);
+      // Desactivamos el botón cancelar de nuevo
+      cancelBtn.disabled = true;
+      alert('¡Saludo cancelado!');
+    });
+  </script>
+</body>
+</html>

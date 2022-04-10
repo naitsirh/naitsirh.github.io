@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Simple setInterval clock</title>
+  <style type="text/css">
+    p {
+      font-family: sans-serif;
+      font-weight: 500;
+      font-size: 22vw;
+      color: green;
+      margin: 0px;
+      /*background: yellow;*/
+      border-radius: 17px;
+    }
+
+    button {
+      font-family: sans-serif;
+      font-weight: 500;
+      font-size: 8vw;
+      color: brown;
+      background: lightgreen;
+      border: 0px;
+      border-radius: 13px;
+      padding: 8px;
+      /*margin-top: 8px;*/
+      margin-left: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="clock"></p>
+  <button class="start">Start</button>
+  <button class="stop">Stop</button>
+  <button class="reset">Reset</button>
+
+  <script type="text/javascript">
+    // Definimos una variable contador para el número de segundos y la ponemos a cero
+    let secondCount = 0;
+    // Definimos una variable global para almacenar el intervalo cuando está activo
+    let stopWatch;
+    // Almacenamos una referencia al párrafo a visualizar en una variable
+    const displayPara = document.querySelector('.clock');
+
+    // Función para calcular las horas, minutos y segundos actuales y mostrar el recuento
+    function displayCount() {
+      // Calculamos las horas, minutos y segundos actuales
+      let hours = Math.floor(secondCount/3600);
+      let minutes = Math.floor((secondCount % 3600)/60);
+      let seconds = Math.floor(secondCount % 60);
+      let cents = Math.floor(secondCount % 60);
+
+      // Muestrmos un cero a la izquierda si los valores son menores que diez
+      let displayHours = (hours < 10) ? '0' + hours : hours;
+      let displayMinutes = (minutes < 10) ? '0' + minutes : minutes;
+      let displaySeconds = (seconds < 10) ? '0' + seconds : seconds;
+      let displayCents = (cents < 10) ? '0' + cents : cents;
+
+      // Escribimos el tiempo actual del cronómetro en el párrafo de visualización
+      displayPara.textContent = displayHours + ':' + displayMinutes + ':' + displaySeconds /*+ ':' + displayCents*/;
+
+      // Incrementamos el contador de segundos de a uno
+      secondCount++;
+    }
+
+    // Almacenamos referencias a los botones en constantes
+    const startBtn = document.querySelector('.start');
+    const stopBtn = document.querySelector('.stop');
+    const resetBtn = document.querySelector('.reset');
+
+    // Cuando el botón de inicio es presionado, comienza a correr displayCount() una vez por segundo usando setInterval()
+    startBtn.addEventListener('click', () => {
+      stopWatch = setInterval(displayCount, 100);
+      startBtn.disabled = true;
+    })
+
+    // Cuando el botón de parada es presionado, borremos el intervalo para detener el conteo
+    stopBtn.addEventListener('click', () => {
+      clearInterval(stopWatch);
+      startBtn.disabled = false;
+    });
+
+    // Cuando el botón de reseteo es presionado, volvemos a poner el contador a cero, e inmediatamente actualizamos la pantalla
+    resetBtn.addEventListener('click', () => {
+      clearInterval(stopWatch);
+      startBtn.disabled = false;
+      secondCount = 0;
+      displayCount();
+    });
+
+    // Corremos displayCount() pronto como se cargue la página para que se muestre el reloj
+    displayCount();
+  </script>
+</body>
+</html>

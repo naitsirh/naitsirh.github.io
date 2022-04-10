@@ -1,0 +1,74 @@
+[
+  {
+    "name" : "alubias enlatadas",
+    "price" : 0.40,
+    "image" : "beans.jpg",
+    "type" : "vegetales"
+  },
+  {
+    "name" : "salchichas",
+    "price" : 1.99,
+    "image" : "hotdogs.jpg",
+    "type" : "carne"
+  },
+  {
+    "name" : "viandada",
+    "price" : 2.85,
+    "image" : "spam.jpg",
+    "type" : "carne"
+  },
+  {
+    "name" : "alubias fritas",
+    "price" : 0.99,
+    "image" : "refried.jpg",
+    "type" : "vegetales"
+  },
+  {
+    "name" : "porotos rojos",
+    "price" : 0.58,
+    "image" : "kidney.jpg",
+    "type" : "vegetales"
+  },
+  {
+    "name" : "arvejas",
+    "price" : 0.52,
+    "image" : "gardenpeas.jpg",
+    "type" : "vegetales"
+  },
+  {
+    "name" : "arvejas en crema",
+    "price" : 0.58,
+    "image" : "mushypeas.jpg",
+    "type" : "vegetales"
+  },
+  {
+    "name" : "corned beef",
+    "price" : 2.39,
+    "image" : "cornedbeef.jpg",
+    "type" : "carne"
+  },
+  {
+    "name" : "sopa de tomates",
+    "price" : 1.40,
+    "image" : "tomatosoup.jpg",
+    "type" : "sopa"
+  },
+  {
+    "name" : "tomate triturado",
+    "price" : 0.45,
+    "image" : "tomato.jpg",
+    "type" : "vegetales"
+  },
+  {
+    "name" : "sopa de fideos con pollo",
+    "price" : 1.89,
+    "image" : "chickennoodle.jpg",
+    "type" : "sopa"
+  },
+  {
+    "name" : "sopa de zanahoria",
+    "price" : 1.49,
+    "image" : "carrotcoriander.jpg",
+    "type" : "sopa"
+  }
+]
