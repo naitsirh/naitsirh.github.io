@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Events</title>
+</head>
+
+<body>
+  <button>Change color</button>
+
+  <script type="text/javascript">
+    const btn = document.querySelector('button');
+
+    function random(num) {
+      return Math.floor(Math.random() * (num + 1));
+    }
+
+    function bgChange() {
+      const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      document.body.style.backgroundColor = rndCol;
+      console.log(rndCol);
+    }
+
+    btn.onclick = bgChange;	
+	</script>
+</body>
+
+</html>
