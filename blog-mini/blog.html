@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Diseño web tipo blog - para práctica</title>
+  <link rel="stylesheet" href="css/principal.css">
+  <link rel="stylesheet" href="css/blog.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+
+
+<body>
+
+  <!-- Header - menú -->
+  <header>
+
+    <div class="header-content">
+      <div class="logo">
+        <h1>Naitsirh<b>Pro</b> </h1>
+      </div>
+
+      <div class="menu" id="show-menu">
+
+        <nav>
+          <ul>
+            <li><a href="#"><span class="ic">&#127968;&#65038;</span>Inicio</a></li>
+            <li><a href="#"><span class="ic">&#128366;</span>Viajes</a></li>
+            <li class="menu-selected"><a href="blog.html" class="text-menu-selected"><span class="ic">&#128187;&#65038;</span>Blog</a></li>
+            <li><a href="#"><span class="ic">&#9743;</span>Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="ctn-icon-search">
+        <p id="icon-search">&#x1f50d;&#xfe0e;</p>
+      </div>
+    </div>
+
+    <div id="icon-menu">
+      <p>&#8801;</p>
+    </div>
+
+  </header>
+
+
+
+  <div id="ctn-bars-search">
+    <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+  </div>
+
+  <ul id="box-search">
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Norte</a></li>
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Centro</a></li>
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Sur</a></li>
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Cataratas</a></li>
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Pampa</a></li>
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Delta</a></li>
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Patagonia</a></li>
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Como reservar</a></li>
+    <li><a href="articulo.html">&#x1f50d;&#xfe0e; Pasajes</a></li>
+  </ul>
+
+  <div id="cover-ctn-search"></div>
+
+
+
+  <!-- Contenedor de toda la página (para usar con el JS) -->
+  <div class="container-all" id="move-content">
+
+
+
+  <!-- Portada -->
+  <div class="blog-container-cover">
+    <div class="container-info-cover">
+      <h1>¡Encuentra tu destino!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam aliquam quis fuga beatae blanditiis assumenda.</p>
+    </div>
+  </div>
+
+
+
+  <div class="container-post">
+
+    <input type="radio" id="TODOS" name="categories" value="TODOS" checked>
+    <input type="radio" id="NORTE" name="categories" value="NORTE">
+    <input type="radio" id="CATARATAS" name="categories" value="CATARATAS">
+    <input type="radio" id="CENTRO" name="categories" value="CENTRO">
+    <input type="radio" id="DELTA" name="categories" value="DELTA">
+    <input type="radio" id="MENDOZA" name="categories" value="MENDOZA">
+    <input type="radio" id="SUR" name="categories" value="SUR">
+    <input type="radio" id="PATAGONIA" name="categories" value="PATAGONIA">
+
+    <div class="container-category">
+      <label for="TODOS">TODOS</label>
+      <label for="NORTE">NORTE</label>
+      <label for="CATARATAS">CATARATAS</label>
+      <label for="CENTRO">CENTRO</label>
+      <label for="DELTA">DELTA</label>
+      <label for="MENDOZA">MENDOZA</label>
+      <label for="SUR">SUR</label>
+      <label for="PATAGONIA">PATAGONIA</label>
+    </div>
+
+
+    <!-- Publicaciones -->
+    <div class="posts">
+      <div class="post" data-category="NORTE">
+        <div class="ctn-img">
+          <img src="img/articulos/norte.jpg" alt="">
+        </div>
+
+        <h2>Los mil colores del norte argentino</h2>
+
+        <span>26 febrero 2020 - 1:32 am</span>
+
+        <ul class="ctn-tag">
+          <li>NORTE</li>
+        </ul>
+
+        <a href="articulo.html"><button>Leer más</button></a>
+      </div>
+
+
+      <div class="post" data-category="NORTE CATARATAS">
+        <div class="ctn-img">
+          <img src="img/articulos/cataratas.jpg" alt="">
+        </div>
+
+        <h2>Las monumentales Cataratas del Iguazú</h2>
+
+        <span>26 febrero 2020 - 1:32 am</span>
+
+        <ul class="ctn-tag">
+          <li>NORTE</li>
+          <li>CATARATAS</li>
+        </ul>
+
+        <a href="#"><button>Leer más</button></a>
+      </div>
+
+
+      <div class="post" data-category="CENTRO">
+        <div class="ctn-img">
+          <img src="img/articulos/centro.jpg" alt="">
+        </div>
+
+        <h2>La Pampa y sus interminables praderas</h2>
+
+        <span>26 febrero 2020 - 1:32 am</span>
+
+        <ul class="ctn-tag">
+          <li>CENTRO</li>
+        </ul>
+
+        <a href="#"><button>Leer más</button></a>
+      </div>
+
+
+      <div class="post" data-category="CENTRO DELTA">
+        <div class="ctn-img">
+          <img src="img/articulos/delta.jpg" alt="">
+        </div>
+
+        <h2>Delta del río Paraná: otro planeta</h2>
+
+        <span>26 febrero 2020 - 1:32 am</span>
+
+        <ul class="ctn-tag">
+          <li>CENTRO</li>
+          <li>DELTA</li>
+        </ul>
+
+        <a href="#"><button>Leer más</button></a>
+      </div>
+
+
+      <div class="post" data-category="CENTRO MENDOZA">
+        <div class="ctn-img">
+          <img src="img/articulos/mendoza.jpg" alt="">
+        </div>
+
+        <h2>Mendoza: tierra para coleccionar postales</h2>
+
+        <span>26 febrero 2020 - 1:32 am</span>
+
+        <ul class="ctn-tag">
+          <li>CENTRO</li>
+          <li>MENDOZA</li>
+        </ul>
+
+        <a href="#"><button>Leer más</button></a>
+      </div>
+
+
+      <div class="post" data-category="SUR">
+        <div class="ctn-img">
+          <img src="img/articulos/tierradelfuego.jpg" alt="">
+        </div>
+
+        <h2>El sur más al sur del mundo: Tierra del Fuego</h2>
+
+        <span>26 febrero 2020 - 1:32 am</span>
+
+        <ul class="ctn-tag">
+          <li>SUR</li>
+        </ul>
+
+        <a href="#"><button>Leer más</button></a>
+      </div>
+
+
+      <div class="post" data-category="SUR PATAGONIA">
+        <div class="ctn-img">
+          <img src="img/articulos/patagonia.jpg" alt="">
+        </div>
+
+        <h2>La estepa, el viento y la Patagonia</h2>
+
+        <span>26 febrero 2020 - 1:32 am</span>
+
+        <ul class="ctn-tag">
+          <li>SUR</li>
+          <li>PATAGONIA</li>
+        </ul>
+
+        <a href="#"><button>Leer más</button></a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Botón de ir hacia arriba -->
+  <div id="button-up">
+    <p>&#129137;</p>
+  </div>
+
+
+
+  <!-- Footer -->
+  <div class="container-footer">
+    <footer>
+      <div class="logo-footer">
+        <img src="img/un-logo.png" alt="">
+      </div>
+
+      <div class="redes-footer">
+        <a href="#" class="icon-redes-footer fb">FB</a>
+        <a href="#" class="icon-redes-footer ig">IG</a>
+        <a href="#" class="icon-redes-footer wp">WP</a>
+      </div>
+
+      <hr>
+
+      <h4>© 2020 NaitsirhPro - Todos los Derechos Reservados</h4>
+    </footer>
+  </div>
+
+
+
+  <!-- Contenedor de toda la página (para usar con el JS) -->
+  </div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
