@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="eng">
+  <head>
+    <meta content="16322ca8-b746-4d3a-a7a3-84b4d36c1279" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="calibre (4.15.0)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>Shyness \&amp; Love: Causes, Consequences, and Treatment \( PDFDrive.com \).epub</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="uAyb4EXgEgTSHKuSCoxBnQ3" playOrder="1">
+      <navLabel>
+        <text>Chapter 1: INTRODUCTION 1</text>
+      </navLabel>
+      <content src="index_split_001.html"/>
+    </navPoint>
+    <navPoint id="ubhScJBkGulmyjvbgehzkh2" playOrder="2">
+      <navLabel>
+        <text>Chapter 4: ASTROLOGY AND REINCARNATION 103</text>
+      </navLabel>
+      <content src="index_split_002.html"/>
+    </navPoint>
+    <navPoint id="ujiXAkcUfrJ48eNtbfKCYB4" playOrder="3">
+      <navLabel>
+        <text>Chapter 6: LOVESHYNESS: ITS INTRAUTERINE</text>
+      </navLabel>
+      <content src="index_split_003.html"/>
+    </navPoint>
+    <navPoint id="uQTXMNY3WMHqfoEr2vP4kC6" playOrder="4">
+      <navLabel>
+        <text>Chapter 7: FAMILY COMPOSITION 161</text>
+      </navLabel>
+      <content src="index_split_004.html"/>
+    </navPoint>
+    <navPoint id="unb8xKPHeSrnQCDrcqlfpD4" playOrder="5">
+      <navLabel>
+        <text>Chapter Postscript 391</text>
+      </navLabel>
+      <content src="index_split_005.html"/>
+    </navPoint>
+    <navPoint id="uLKypWMFGWCDOK2BQhaq8W6" playOrder="6">
+      <navLabel>
+        <text>Chapter 17: SOME PSYCHOLOGICAL CHARACTERISTICS</text>
+      </navLabel>
+      <content src="index_split_006.html"/>
+    </navPoint>
+    <navPoint id="ufQPhdnfJxb6wR34JAE7iOC" playOrder="7">
+      <navLabel>
+        <text>Chapter 18: PARENTHOOD ASPIRATIONS 431</text>
+      </navLabel>
+      <content src="index_split_007.html"/>
+    </navPoint>
+    <navPoint id="ujKA6UxPaKDsKI9rNaxgk69" playOrder="8">
+      <navLabel>
+        <text>Chapter 22: PRACTICE-DATING THERAPY 491</text>
+      </navLabel>
+      <content src="index_split_008.html"/>
+    </navPoint>
+    <navPoint id="uarxQ5dIuGyTBxjwMeGIgf5" playOrder="9">
+      <navLabel>
+        <text>Chapter 23: SOME THERAPEUTIC ADJUNCTS 525</text>
+      </navLabel>
+      <content src="index_split_009.html"/>
+    </navPoint>
+    <navPoint id="uqC9RAPRgXVOQZOsO8wZeDA" playOrder="10">
+      <navLabel>
+        <text>Chapter 24: SOME RECOMMENDATIONS CONCERNING</text>
+      </navLabel>
+      <content src="index_split_010.html"/>
+    </navPoint>
+    <navPoint id="uXScxmUCGDTBewHDlYWKrRD" playOrder="11">
+      <navLabel>
+        <text>Chapter 25: SOME FINAL THOUGHTS 613</text>
+      </navLabel>
+      <content src="index_split_011.html"/>
+    </navPoint>
+  </navMap>
+</ncx>
